@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.body{
+    max-width: 70%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.body p:nth-child(1){
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.body p:nth-child(2){
+    font-size: 1.2rem;    
+    line-height: 40px; 
+}
+.nav-box{
+    width: 100%;
+}
+.view-box{
+    width: 100%;
+    display: flex;
+}
+
+.view{
+    width: 50%;
+    margin: auto;
+}
+
+.view img{
+    width: 100%;
+}
+.view-right{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img-box{
+    display: flex;
+    justify-self: center;
+    width:100%;
+    max-width: 50%;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.img-box img{
+    width: 100%;
+}
+
+
+ul{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+li{
+    width: 25%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-weight: bolder;
+    line-height: 40px;
+    transition: transform 1s;
+    /* font-size: 15px; */
+}
+li div img{
+    height: 40px;
+
+}
+li span{
+    border-bottom: 5px solid transparent;
+    line-height: 40px;
+}
+li:hover{
+    border-bottom: 5px solid #374ba8;
+}
+
+
+
+.view-box:nth-of-type(2n) .view {
+    order: 2;
+}
+.view-box:nth-of-type(2n) .view-right {
+    order: 1;
+}
+
+@media (max-width: 1200px){
+    .view-box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 600px;
+        margin: auto;
+    }
+    .view{
+        width: 600px;
+        padding-bottom: 5%;
+    }
+    .view-right{
+        width: 600px;
+        padding-bottom: 5%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .view-box:nth-of-type(2n) .view {
+        order: 1;
+    }
+    .view-box:nth-of-type(2n) .view-right {
+        order: 2;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    .body{
+        max-width: 100%;
+    }
+    .img-box{
+        max-width: 100%;
+    }
+    .view-box:nth-of-type(2n) .view {
+        order: 1;
+    }
+    .view-box:nth-of-type(2n) .view-right {
+        order: 2;
+    }
+}
